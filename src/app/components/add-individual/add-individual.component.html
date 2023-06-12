@@ -1,0 +1,19 @@
+<h2>Add Individual</h2>
+
+<form>
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" [(ngModel)]="individual.firstName" name="firstName">
+  <br>
+  <label for="middleName">Middle Name:</label>
+  <input type="text" id="middleName" [(ngModel)]="individual.middleName" name="middleName">
+  <br>
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" [(ngModel)]="individual.lastName" name="lastName">
+  <br>
+  <label for="generationalSuffix">Generational Suffix:</label>
+  <input type="text" id="generationalSuffix" [(ngModel)]="individual.generationalSuffix" name="generationalSuffix">
+  <br>
+  <!-- Add more fields as per your requirements -->
+
+  <button type="button" (click)="addIndividual()">Add</button>
+</form>

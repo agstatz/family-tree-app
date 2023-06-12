@@ -1,0 +1,8 @@
+<h2>Individuals</h2>
+
+<ul>
+  <li *ngFor="let individual of (individuals$ | async)">
+    {{ individual.firstName }} {{ individual.lastName }}
+    <button (click)="deleteIndividual(individual.key)">Delete</button>
+  </li>
+</ul>
