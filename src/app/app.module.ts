@@ -11,6 +11,10 @@ import { AddIndividualComponent } from './components/add-individual/add-individu
 import { EditIndividualComponent } from './components/edit-individual/edit-individual.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FirebaseService } from './services/firebase.service';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 @NgModule({
@@ -21,6 +25,10 @@ import { FirebaseService } from './services/firebase.service';
     EditIndividualComponent
   ],
   imports: [
+    MatCardModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
     BrowserModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),

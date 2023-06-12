@@ -1,19 +1,40 @@
-<h2>Add Individual</h2>
+<mat-card class="add-individual-card">
+    <mat-card-header><mat-card-title>Add Individual</mat-card-title></mat-card-header>
+    <mat-card-content >
+        <div >
+            <mat-form-field class="mat-form-field" appearance="outline">
+                <mat-label for="firstName">First Name</mat-label>
+                <input matInput type="text" id="firstName" [(ngModel)]="individual.firstName" name="firstName">
+            </mat-form-field>
+            
+            <mat-form-field appearance="outline">
+                <mat-label for="middleName">Middle Name</mat-label>
+                <input matInput type="text" id="middleName" [(ngModel)]="individual.middleName" name="middleName">
+            </mat-form-field>
+            
+            <br>
 
-<form>
-  <label for="firstName">First Name:</label>
-  <input type="text" id="firstName" [(ngModel)]="individual.firstName" name="firstName">
-  <br>
-  <label for="middleName">Middle Name:</label>
-  <input type="text" id="middleName" [(ngModel)]="individual.middleName" name="middleName">
-  <br>
-  <label for="lastName">Last Name:</label>
-  <input type="text" id="lastName" [(ngModel)]="individual.lastName" name="lastName">
-  <br>
-  <label for="generationalSuffix">Generational Suffix:</label>
-  <input type="text" id="generationalSuffix" [(ngModel)]="individual.generationalSuffix" name="generationalSuffix">
-  <br>
-  <!-- Add more fields as per your requirements -->
+            <mat-form-field appearance="outline">
+                <mat-label for="lastName">Last Name</mat-label>
+                <input matInput type="text" id="lastName" [(ngModel)]="individual.lastName" name="lastName">
+            </mat-form-field>
 
-  <button type="button" (click)="addIndividual()">Add</button>
-</form>
+            <br>
+            
+            <mat-form-field appearance="outline">
+                <mat-label for="generationalSuffix">Generational Suffix</mat-label>
+                <input matInput type="text" id="genSuffix" [(ngModel)]="individual.generationalSuffix" name="genSuffix">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label for="birthLocation">Birth Location</mat-label>
+                <input matInput type="text" id="birthLocation" [(ngModel)]="individual.birthLocation" name="birthLocation">
+            </mat-form-field>
+            <br>
+        </div>
+            <!-- Add more fields as per requirements -->
+    </mat-card-content>
+    <mat-card-actions align="end"><button mat-flat-button type="button" color="primary" (click)="addIndividual()">Add</button></mat-card-actions>
+    
+</mat-card>
+

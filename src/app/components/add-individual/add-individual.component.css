@@ -1,0 +1,8 @@
+.content-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.add-individual-card {
+    max-width: 500px;
+}
